@@ -1,0 +1,14 @@
+{
+  "name": "empire",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "nedb": "1.8.0",
+    "request": "2.88.0",
+    "body-parser": "1.18.3"
+  }
+}
