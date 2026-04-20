@@ -147,15 +147,6 @@ new Vue({
             fetch('/api/data').then(function (r) { return r.json(); }).then(function (d) {
                 self.users = d.users; self.products = d.products; self.employees = d.employees;
                 self.sales = d.sales; self.invoices = d.invoices;
-                if (self.invoices.length === 0 && self.session) {
-                    self.invoices = [
-                        { date: "10/04", amount: 50000, type: "VENTE", owner: self.session.user, details: "Casque Bluetooth Luxe" },
-                        { date: "11/04", amount: 20000, type: "DEPENSE", owner: self.session.user, details: "Frais divers" },
-                        { date: "12/04", amount: 95000, type: "VENTE", owner: self.session.user, details: "Smartphone reconditionné" },
-                        { date: "13/04", amount: 40000, type: "ACHAT_STOCK", owner: self.session.user, details: "Réappro 10x Chargeur Rapide" },
-                        { date: "14/04", amount: 10000, type: "VENTE", owner: self.session.user, details: "Câble USB-C" }
-                    ];
-                }
                 self.chat = d.chat; self.deliveries = d.deliveries;
 
                 if (self.session) {
